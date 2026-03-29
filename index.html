@@ -16,7 +16,25 @@
             <input type="text" name="phone" placeholder="Enter mobile number" required />
   
   <button type="submit">Register</button>
+</form>
+
+            
+
+            
+
+            <div class="input-group hidden" id="role-field">
+                <label>Select Role</label>
+                <select id="role">
+                    <option value="farmer">Seller</option>
+                    <option value="buyer">Buyer</option>
+                </select>
+            </div>
+
+            <div class="error" id="error-message"></div>
+
+            <button type="submit" class="btn" id="submit-btn">Login</button>
         </form>
+
         <div class="toggle" id="toggle-text">
             Don't have an account? <span onclick="toggleForm()">Register</span>
         </div>
