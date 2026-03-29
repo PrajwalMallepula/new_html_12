@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="sstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo_mandi.png" alt="eMandi Logo" class="logo-img">
+            <span class="logo-text">eMandi</span>
+        </div>
+        <div class="navs">
+            <ul id="nav-link">
+                <li><a href="http://127.0.0.1:5500/A%20MANDI/Login/lindex.html"><i class="fa-solid fa-user-plus"></i> Sign Up/Sign In</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="header">
+        <div class="logo-section">
+            <a href="http://127.0.0.1:5500/A%20MANDI/index.html"><i class="fa-regular fa-house"></i> Home</a>
+        </div>
+
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <ul id="nav-links">
+                <li><a href="http://127.0.0.1:5500/A%20MANDI/About%20US/aindex.html">Explore Us</a></li>
+                <li><a href="http://127.0.0.1:5500/A%20MANDI/Shop/sindex.html">Store</a></li>
+                <li><a href="http://127.0.0.1:5500/A%20MANDI/Mandis/mindex.html">Mandis</a></li>
+                <li><a href="http://127.0.0.1:5500/A%20MANDI/FAQs/findex.html">FAQ's</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-cart">
+            <input type="text" placeholder="Search for our farm-fresh products">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <span><i class="fa-solid fa-bag-shopping"></i></span>
+        </div>
+
+        <div class="location-wrapper">
+
+            <div class="location-btn" onclick="toggleDropdown()">
+                <div class="location-left">
+                    <span id="selectedCity"><i class="fa-solid fa-location-dot"></i> Your Location</span>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+
+            <div class="dropdown" id="dropdown">
+                <input type="text" placeholder="Search city..." class="search-box" onkeyup="filterCities(this.value)">
+
+                <div class="city" onclick="selectCity('Delhi')">Delhi</div>
+                <div class="city" onclick="selectCity('Mumbai')">Mumbai</div>
+                <div class="city" onclick="selectCity('Patna')">Patna</div>
+                <div class="city" onclick="selectCity('Kolkata')">Kolkata</div>
+                <div class="city" onclick="selectCity('Bangalore')">Bangalore</div>
+                <div class="city" onclick="selectCity('Hyderabad')">Hyderabad</div>
+            </div>
+
+        </div>
+
+        <div class="sell-btn">
+            <div class="plus-icon"><i class="fa-solid fa-plus"></i></div>
+            <div class="sell-btn-text">SELL</div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to eMandi 🌾</h1>
+            <p>Your digital marketplace for fresh crops. Buy & sell directly with ease.</p>
+    
+            <div class="buttons">
+                <a href="http://127.0.0.1:5500/A%20MANDI/Shop/sindex.html"><button class="btn btn-primary">Explore All Products</button></a>
+                <a href="#"><button class="btn btn-secondary">Sell Your Crop</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="categorie">
+        <div class="section-title">
+            <h2>— CATEGORIES —</h2>
+            <p>Discover boundless choices with over 500+ handpicked products</p>
+        </div>
+
+<!-- SLIDER -->
+        <div class="slider">
+            <div class="slide-track" id="categorieContainer">
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Vegetable/index.html">
+                        <img src="Vegetables.avif" alt="">
+                        <h4>Vegetables</h4>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Fruit/index.html">
+                        <img src="Fruits.webp" alt="">
+                        <h4>Fruits</h4>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Leafy/index.html">
+                        <img src="Leaf.webp" alt="">
+                        <h4>Leafy Greens</h4>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Flower/index.html">
+                        <img src="Flowers.jpg" alt="">
+                        <h4>Flowers</h4>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Groceries/index.html">
+                        <img src="Groceries.avif" alt="">
+                        <h4>Groceries</h4>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Cereals/index.html">
+                        <img src="Cereals.avif" alt="">
+                        <h4>Cereals</h4>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Pulses/index.html">
+                        <img src="Pulses.avif" alt="">
+                        <h4>Pulses</h4>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="http://127.0.0.1:5500/A%20MANDI/Shop/Spices/index.html">
+                        <img src="Spices.webp" alt="">
+                        <h4>Spices</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="products-header">
+        <h2>All Products</h2>
+        <div class="items-count">139 items</div>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="mango.jpg" />
+                <div class="badge">₹12 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FRUITS</div>
+                <div class="stock">Stock: 100kg</div>
+                <h3>Mangoes</h3>
+                <p class="desc">Popular South Indian mango variety loved for taste.</p>
+                <div>
+                    <span class="price">₹100</span>
+                    <span class="old-price">₹112</span>
+                    <span class="save">SAVE ₹12</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="pomegranate.jpg" />
+                <div class="badge">₹5 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FRUITS</div>
+                <div class="stock">Stock: 200kg</div>
+                <h3>Pomegranate</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹105</span>
+                    <span class="old-price">₹110</span>
+                    <span class="save">SAVE ₹5</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="banana.jpg" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FRUITS</div>
+                <div class="stock">Stock: 300kg</div>
+                <h3>Banana</h3>
+                <p class="desc">Price per dozen</p>
+                <div>
+                    <span class="price">₹80</span>
+                    <span class="old-price">₹90</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="grapes.jpg" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FRUITS</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Grape</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹80</span>
+                    <span class="old-price">₹90</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="custard.webp" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FRUITS</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Custard Apple</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹150</span>
+                    <span class="old-price">₹160</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="dragon.webp" />
+                <div class="badge">₹20 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FRUITS</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Dragon Fruit</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹250</span>
+                    <span class="old-price">₹270</span>
+                    <span class="save">SAVE ₹20</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="apple.webp" />
+                <div class="badge">₹20 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FRUITS</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Apple</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹180</span>
+                    <span class="old-price">₹200</span>
+                    <span class="save">SAVE ₹20</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-img">
+                <img src="lady finger.jpg" />
+                <div class="badge">₹2 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">VEGETABLES</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Lady Finger</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹28</span>
+                    <span class="old-price">₹30</span>
+                    <span class="save">SAVE ₹2</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="mushrooms.jpg" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">VEGETABLES</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Mushrooms</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹200</span>
+                    <span class="old-price">₹210</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="cauliflower.jpg" />
+                <div class="badge">₹5 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">VEGETABLES</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Cauliflower</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹30</span>
+                    <span class="old-price">₹35</span>
+                    <span class="save">SAVE ₹5</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="cucumber.jpg" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">VEGETABLES</div>
+                <div class="stock">Stock: 350kg</div>
+                <h3>Cucumber</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹40</span>
+                    <span class="old-price">₹50</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="coriander.jpg" />
+                <div class="badge">₹5 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">LEAFY</div>
+                <div class="stock">Stock: 150kg</div>
+                <h3>Coriander</h3>
+                <p class="desc">Price per bunch</p>
+                <div>
+                    <span class="price">₹10</span>
+                    <span class="old-price">₹15</span>
+                    <span class="save">SAVE ₹5</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="mint.jpg" />
+                <div class="badge">₹7 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">LEAFY</div>
+                <div class="stock">Stock: 100kg</div>
+                <h3>Mint Leaves</h3>
+                <p class="desc">Price per bunch</p>
+                <div>
+                    <span class="price">₹5</span>
+                    <span class="old-price">₹12</span>
+                    <span class="save">SAVE ₹7</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="marigold.jpg" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FLOWER</div>
+                <div class="stock">Stock: 300kg</div>
+                <h3>Marigold</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹120</span>
+                    <span class="old-price">₹130</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="rose.jpg" />
+                <div class="badge">₹5 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">FLOWER</div>
+                <div class="stock">Stock: 250kg</div>
+                <h3>Rose</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹15</span>
+                    <span class="old-price">₹20</span>
+                    <span class="save">SAVE ₹5</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="almond.jpg" />
+                <div class="badge">₹20 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">GROCERIES</div>
+                <div class="stock">Stock: 250kg</div>
+                <h3>Almonds</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹890</span>
+                    <span class="old-price">₹900</span>
+                    <span class="save">SAVE ₹20</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="cashew.jpg" />
+                <div class="badge">₹30 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">GROCERIES</div>
+                <div class="stock">Stock: 250kg</div>
+                <h3>Cashew</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹920</span>
+                    <span class="old-price">₹950</span>
+                    <span class="save">SAVE ₹30</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="rice.jpg" />
+                <div class="badge">₹5 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">CEREALS</div>
+                <div class="stock">Stock: 500kg</div>
+                <h3>Rice</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹80</span>
+                    <span class="old-price">₹85</span>
+                    <span class="save">SAVE ₹5</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="wheat.jpg" />
+                <div class="badge">₹5 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">CEREALS</div>
+                <div class="stock">Stock: 2000kg</div>
+                <h3>Wheat</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹45</span>
+                    <span class="old-price">₹50</span>
+                    <span class="save">SAVE ₹5</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="moong.jpg" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">PULSES</div>
+                <div class="stock">Stock: 2000kg</div>
+                <h3>Moong Dal</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹120</span>
+                    <span class="old-price">₹130</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="chana.jpg" />
+                <div class="badge">₹10 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">PULSES</div>
+                <div class="stock">Stock: 2000kg</div>
+                <h3>Chana Dal</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹100</span>
+                    <span class="old-price">₹110</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="turmeric.webp" />
+                <div class="badge">₹5 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">SPICES</div>
+                <div class="stock">Stock: 200kg</div>
+                <h3>Turmeric</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹115</span>
+                    <span class="old-price">₹120</span>
+                    <span class="save">SAVE ₹5</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-img">
+                <img src="chilli.webp" />
+                <div class="badge">₹15 OFF</div>
+                <div class="fresh">FARM FRESH</div>
+                <div class="heart">♡</div>
+            </div>
+            <div class="product-content">
+                <div class="category">SPICES</div>
+                <div class="stock">Stock: 200kg</div>
+                <h3>Dry Red Chilli</h3>
+                <p class="desc">Price per kg</p>
+                <div>
+                    <span class="price">₹260</span>
+                    <span class="old-price">₹270</span>
+                    <span class="save">SAVE ₹10</span>
+                </div>
+                <button class="add-btn">🛒 Bid</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <section class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy & Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>User Area</h3>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">My Cart</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Help & Support</h3>
+                <ul>
+                    <li><a href="#">Order Returns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fa-solid fa-phone"></i> 040-1234 5678</p> <br>
+                <p><i class="fa-brands fa-whatsapp"></i> +91 9876054321</p> <br>
+                <p><i class="fa-regular fa-envelope"></i> support@emandi.com</p> <br>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 eMandi | Empowering Farmers Digitally | All Rights Reserved.</p>
+    </footer>
+
+    <script src="scode.js"></script>
+</body>
+</html>
