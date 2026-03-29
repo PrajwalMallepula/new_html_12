@@ -39,6 +39,9 @@ form.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
+    if(response.ok){
+      window.location.href = "sindex.html";
+    }
 
     const result = await response.json();
     console.log("Server response:", result);
